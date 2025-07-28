@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIO BOX</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <span class="icon">⚙️</span>
+      <a href="#">Iniciar sesión</a>
+    </div>
+    <nav class="navbar-right">
+      <a href="#" onclick="openModal('quienesModal')">¿Quiénes somos?</a>
+      <a href="#" onclick="openModal('productosModal')">Nuestros Productos</a>
+      <a href="#" onclick="abrirVentana('ventanaCatalogo')">Catálogo</a>
+      <a href="#" onclick="openModal('contactoModal')">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- BIO BOX -->
+  <section class="section bio-box">
+    <div class="content">
+      <img src="img/empaques.jpg" class="image" alt="BIO BOX" />
+      <div class="text">
+        <img src="img/reciclaje.avif" width="200" height="200" />
+        <h1>BIO BOX</h1>
+        <p class="slogan">“No solo empacamos productos,<br> empacamos propósitos” </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL QUIÉNES SOMOS -->
+  <div id="quienesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('quienesModal')">❌</span>
+      <section class="green-box">
+        <div class="content">
+          <div class="text">
+            <h1>GREEN BOX</h1>
+            <p>Somos un grupo de estudiantes creativos comprometidos con el diseño ecológico y la producción responsable. Nuestra misión es ofrecer empaques sostenibles elaborados con materiales como papel Kraft y cera, ideales para cuidar el planeta sin dejar de lado la estética y funcionalidad.</p>
+            <p>Creemos que un buen empaque puede contar una historia, y la nuestra se basa en:</p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="img/reciclaje.avif" alt="Reciclaje" style="width:250px; height:200px; margin-bottom: 20px;">
+            <div class="burbujas-lista">
+              <div class="burbuja-item">Sostenibilidad</div>
+              <div class="burbuja-item">Diseño consciente</div>
+              <div class="burbuja-item">Trabajo colaborativo</div>
+            </div>
+            </div>
+  <button class="next-button" onclick="openModal('equipoModal'); closeModal('quienesModal')">➡️</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- MODAL EQUIPO -->
+  <div id="equipoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('equipoModal')">❌</span>
+      <section class="equipo-section">
+        <h2>Equipo</h2>
+        <div class="equipo-contenido">
+          <div class="fotos">
+            <div class="foto"><img src="img/Integrante1.jpeg"><p>Macas Jeremy</p></div>
+            <div class="foto"><img src="img/Integrante2.JPG"><p>Molina Keyla</p></div>
+            <div class="foto"><img src="img/Integrante3.jpeg"><p>Villacrés Ariel</p></div>
+            <div class="foto"><img src="img/Integrante4.JPG"><p>Zambrano Gabriela</p></div>
+            <div class="foto"><img src="img/Integrante5.JPG"><p>Panchana Jennifer</p></div>
+          </div>
+          <div class="texto-equipo">
+            <p>CADA UNO DE NUESTROS PRODUCTOS ES PENSADO CON CARIÑO, BUSCANDO ALTERNATIVAS AL PLÁSTICO,
+              ADAPTÁNDONOS A LAS NECESIDADES DE NUESTROS CLIENTES.</p>
+            <p>DESDE CAJAS PARA POSTRES HASTA ENVOLTORIOS PERSONALIZADOS, QUEREMOS APORTAR
+              CON IDEAS QUE APORTEN AL CAMBIO.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- MODAL PRODUCTOS -->
+  <div id="productosModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('productosModal')">❌</span>
+      <section class="productos-box">
+        <h2>Nuestros Productos</h2>
+        <div class="opciones">
+          <button onclick="abrirVentana('ventanaProductos'); closeModal('productosModal')">Productos</button>
+          <button onclick="abrirVentana('ventanaDetalle'); closeModal('productosModal')">Detalle</button>
+          <button onclick="abrirVentana('ventanaTamanos'); closeModal('productosModal')">Tamaños</button>
+          <button onclick="abrirVentana('ventanaMaterial'); closeModal('productosModal')">Material</button>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+<!-- Ventana emergente de PRODUCTOS -->
+<div id="ventanaProductos" class="ventana">
+  <div class="contenido-ventana">
+    <span class="cerrar" onclick="cerrarVentana('ventanaProductos')">❌</span>
+    <h2>PRODUCTOS</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>PRODUCTO</th>
+          <th>CONTENIDO POR UNIDAD</th>
+          <th>TAMAÑOS DISPONIBLES</th>
+          <th>CAPACIDAD ESTIMADA (ONZAS)</th>
+          <th>USOS SUGERIDOS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SERVILLETAS BIODEGRADABLES</td>
+          <td>SET DE 10 O 20</td>
+          <td>ÚNICO</td>
+          <td>N/A</td>
+          <td>COMPLEMENTO PARA ENTREGAS</td>
+        </tr>
+        <tr>
+          <td>CAJAS MULTIUSOS CON TAPA</td>
+          <td>½ DOCENA O DOCENA COMPLETA</td>
+          <td>M/G</td>
+          <td>16 oz HASTA 32 oz</td>
+          <td>MINI POSTRES, TARTALETAS, CUPCAKES, GALLETAS ALFAJORES, ETC.</td>
+        </tr>
+        <tr>
+          <td>BANDEJA PARA POSTRES</td>
+          <td>UNIDAD</td>
+          <td>G/M</td>
+          <td>HASTA 40 oz</td>
+          <td>TORTA MEDIANA, BROWNIES, ETC.</td>
+        </tr>
+        <tr>
+          <td>CAJA GRANDE PARA TORTAS</td>
+          <td>1 UNIDAD</td>
+          <td>G (PERSONALIZABLE)</td>
+          <td>Hasta 60 oz o más</td>
+          <td>TORTAS ENTERAS</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+<!-- ...después de la ventana de productos... -->
+ <!-- Ventana emergente -->
+<div id="ventanaDetalle" class="ventana">
+  <div class="contenido-ventana">
+    <span class="cerrar" onclick="cerrarVentana('ventanaDetalle')">❌</span>
+    <h2 class="titulo-detalle">DETALLE</h2>
+    <div class="detalle-contenido">
+      <div class="detalle-texto">
+        <p class="detalle-titulo">COMO:</p>
+        <ul>
+          <li>Etiquetas</li>
+          <li>Nombres</li>
+          <li>Frases</li>
+          <li>Logos</li>
+        </ul>
+      </div>
+
+      <div class="detalle-imagenes">
+        <img src="img/empaque1.jpeg" alt="Caja 1" />
+        <img src="img/empaque2.jpeg" alt="Caja 2" />
+        <img src="img/empaque3.jpeg" alt="Caja 3" />
+      </div>
+    </div>
+
+    <p class="personalizamos">¡PERSONALIZAMOS TU EMPAQUE!</p>
+  </div>
+</div>
+<!-- ...antes de la ventana de tamaños... -->
+
+<!-- Ventana emergente de Tamaños -->
+<div id="ventanaTamanos" class="ventana">
+  <span class="cerrar" onclick="cerrarVentana('ventanaTamanos')">❌</span>
+  <h2 class="titulo-tamanos">TAMAÑOS</h2>
+  <div class="contenedor-tamanos">
+    <div class="tamano">
+      <h3>PEQUEÑO</h3>
+      <div class="burbuja">10x10x6 cm</div>
+      <p>Ideal para 1 postre</p>
+    </div>
+    <div class="tamano">
+      <h3>MEDIANO</h3>
+      <div class="burbuja">20x15x10 cm</div>
+      <p>Hasta ½ docena de dulces</p>
+    </div>
+    <div class="tamano">
+      <h3>GRANDE</h3>
+      <div class="burbuja">30x20x15 cm</div>
+      <p>Perfecto para docenas o tortas</p>
+    </div>
+  </div>
+</div>
+
+<!-- Sección MATERIAL -->
+<div id="ventanaMaterial" class="ventana">
+  <div class="contenido-ventana">
+    <span class="cerrar" onclick="cerrarVentana('ventanaMaterial')">❌</span>
+    <h2 class="titulo-material">MATERIAL</h2>
+    <div class="material-contenido">
+      <ol>
+        <li><strong>GRAMAJE DE PAPEL:</strong> 180g, 220g o 300g según el tipo de empaque.</li>
+        <li><strong>TIPO DE CIERRE:</strong> Con broche, solapa o tapa.</li>
+        <li><strong>REVESTIMIENTOS OPCIONALES:</strong> Kraft interno liso o con film biodegradable.</li>
+      </ol>
+      <div class="material-imagenes">
+        <img src="img/empaque4.jfif" alt="Material empaque">
+        <img src="img/empaque5.jpeg" alt="Material empaque">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ventana emergente de Catálogo -->
+<div id="ventanaCatalogo" class="ventana">
+  <div class="contenido-ventana">
+    <span class="cerrar" onclick="cerrarVentana('ventanaCatalogo')">❌</span>
+    <p class="catalogo-descripcion">
+      Descubre nuestra línea de empaques ecológicos elaborados con papel Kraft y cera. Explora los diseños disponibles de personalización para que tu empaque sea único y funcional.
+    </p>
+    <div class="burbuja-item" style="margin: 24px auto 0 auto; width: fit-content;">
+      Catálogo
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CONTACTO -->
+<div id="contactoModal" class="modal">
+  <div class="modal-content contacto-content">
+    <span class="close" onclick="closeModal('contactoModal')">❌</span>
+    <div class="contacto-titulo">REDES SOCIALES</div>
+    <div class="redes-grid">
+      <!-- Instagram -->
+      <div class="red-item">
+        <div class="red-cuadro">
+          <img src="img/logoIg.png" alt="Instagram" class="red-img">
+        </div>
+        <span class="red-label instagram-label">INSTAGRAM</span><br>
+        <span class="red-label instagram-label">@greenbox</span>
+      </div>
+      <!-- Ubicación -->
+      <div class="red-item">
+        <div class="red-cuadro">
+          <img src="img/ubicacion.png" alt="Ubicación" class="red-img">
+        </div>
+        <span class="red-label">Dirección</span><br>
+        <span class="red-label">ESPOL</span>
+      </div>
+      <!-- TikTok -->
+      <div class="red-item">
+        <div class="red-cuadro">
+          <img src="img/tiktok.png" alt="TikTok" class="red-img">
+        </div>
+        <span class="red-label">TikTok</span><br>
+        <span class="red-label">@greenbox</span>
+      </div>
+      <!-- WhatsApp -->
+      <div class="red-item">
+        <div class="red-cuadro">
+          <img src="img/whatsapp.png" alt="WhatsApp" class="red-img">
+        </div>
+        <span class="red-label">WhatsApp</span><br>
+        <span class="red-label">+593912345678</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
